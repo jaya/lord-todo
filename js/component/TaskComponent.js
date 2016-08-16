@@ -1,4 +1,4 @@
-(function (context, Component) {
+(function (context, Component, $) {
 
   var template = [
     '<input type="checkbox"',
@@ -12,6 +12,13 @@
   var TaskComponent = function (container, task) {
     // Call parent constructor
     Component.apply(this, [container, template, task]);
+
+    this.checkbox = $(container).find('input');
+
+    this.checkbox.on('click', function () {
+      task.set('completed', ! task.get('completed'));
+    });
+
   };
 
   // Method inheritance
@@ -19,4 +26,4 @@
 
   context.TaskComponent = TaskComponent;
 
-})(window, Component);
+})(window, Component, jQuery);

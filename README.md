@@ -28,10 +28,10 @@ We'll be using some tools to help us along the way:
   - [X] TaskComponent
   - [X] TaskListComponent
 
-- [ ] Create Events "trait"
-  - [ ] Extend Model to add change event
-  - [ ] Extend Collection to add change event
-  - [ ] Component listens and render on change
+- [X] Create Events "trait"
+  - [X] Extend Model to add change event
+  - [X] Extend Collection to add change event
+  - [X] Component listens and render on change
 
 - [ ] DOMEvents
   - [ ] Create event listeners on Component
