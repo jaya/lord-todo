@@ -1,0 +1,40 @@
+body {
+  background: #eee;
+  font-family: sans-serif;
+  color: #666;
+}
+
+#todo {
+  width: 50%;
+  margin: 20px auto;
+  background: #fefefe;
+  box-shadow: 0 0 5px #999;
+  padding: 20px;
+}
+
+#todo input[type=text] {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  font-size: 2em;
+}
+
+#todo input[type=text]:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+#todo ul {
+  margin: 20px 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+#todo ul li {
+  border-bottom: 1px solid #efefef;
+  padding: 10px;
+}
+
+#todo ul li:last-child {
+  border-bottom: none;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TO-DO list</title>
+  <link rel="stylesheet" href="/css/todo.css" />
+
+  <!-- JS Libs -->
+  <script src="/js/lib/jquery.js"></script>
+  <script src="/js/lib/underscore.js"></script>
+
+  <!-- JS Framework -->
+  <script src="/js/model/Model.js"></script>
+  <script src="/js/model/Collection.js"></script>
+  <script src="/js/component/Component.js"></script>
+
+  <!-- App Models -->
+  <script src="/js/model/Task.js"></script>
+  <script src="/js/model/TaskList.js"></script>
+
+  <!-- App Components -->
+  <script src="/js/component/TaskComponent.js"></script>
+  <script src="/js/component/TaskListComponent.js"></script>
+
+  <!-- Page JS -->
+  <script src="/js/page/index.js"></script>
+</head>
+<body>
+  <div id="todo">
+    <input type="text" id="new_task" placeholder="New task..." />
+    <div id="task-list"></div>
+  </div>
+</body>
+</html>
