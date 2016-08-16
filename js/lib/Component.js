@@ -7,6 +7,7 @@
     this.container = $(container);
     this.template = _.template(template);
     this.model = model;
+    this.model.on('change', _.bind(this.render, this));
     this.render();
   };
 
@@ -15,4 +16,5 @@
   };
 
   context.Component = Component;
+
 })(window, _, $);

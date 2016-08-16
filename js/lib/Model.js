@@ -16,6 +16,7 @@
    */
   Model.prototype.set = function (property, value) {
     this.properties[property] = value;
+    this.trigger('change');
   };
 
   /**
@@ -27,6 +28,9 @@
   Model.prototype.get = function (property) {
     return this.properties[property];
   };
+
+  // Extend Eventable
+  _.extend(Model.prototype, Eventable);
 
   // Exports the Model
   context.Model = Model;

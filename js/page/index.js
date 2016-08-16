@@ -1,6 +1,6 @@
-var task1 = new Task("Task 1");
-var task2 = new Task("Task 2", true);
-var task3 = new Task("Task 3");
+var task1 = new Task("mein");
+var task2 = new Task("top", true);
+var task3 = new Task("animal");
 
 var taskList = new TaskList([task1, task2, task3]);
 

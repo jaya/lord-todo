@@ -10,7 +10,6 @@
   ].join('\n');
 
   var TaskComponent = function (container, task) {
-    console.log(template);
     // Call parent constructor
     Component.apply(this, [container, template, task]);
   };

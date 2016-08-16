@@ -10,14 +10,17 @@
 
   Collection.prototype.push = function (model) {
     this.models.push(model);
+    this.trigger('change');
   };
 
   Collection.prototype.remove = function (model) {
     this.models.splice(this.models.indexOf(model), 1);
+    this.trigger('change');
   };
 
   Collection.prototype.reset = function () {
     this.models = [];
+    this.trigger('change');
   };
 
   Collection.prototype.count = function () {
@@ -35,6 +38,8 @@
   Collection.prototype.indexOf = function (model) {
     return this.models.indexOf(model);
   };
+
+  _.extend(Collection.prototype, Eventable);
 
   context.Collection = Collection;
 

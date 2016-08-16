@@ -3,7 +3,6 @@
   var template = '<ul></ul>';
 
   var TaskListComponent = function (container, taskList) {
-    console.log(template);
     // Call parent constructor
     Component.apply(this, [container, template, taskList]);
   };
