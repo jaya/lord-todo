@@ -13,6 +13,9 @@
 
   Component.prototype.render = function () {
     this.container.html(this.template({ model: this.model }));
+    if (this.bindEvents) {
+      this.bindEvents();
+    }
   };
 
   context.Component = Component;

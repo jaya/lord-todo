@@ -38,3 +38,7 @@ body {
 #todo ul li:last-child {
   border-bottom: none;
 }
+
+.completed {
+  text-decoration: line-through;
+}

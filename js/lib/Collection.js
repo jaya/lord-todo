@@ -13,6 +13,11 @@
     this.trigger('change');
   };
 
+  Collection.prototype.unshift = function (model) {
+    this.models.unshift(model);
+    this.trigger('change');
+  };
+
   Collection.prototype.remove = function (model) {
     this.models.splice(this.models.indexOf(model), 1);
     this.trigger('change');

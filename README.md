@@ -33,8 +33,8 @@ We'll be using some tools to help us along the way:
   - [X] Extend Collection to add change event
   - [X] Component listens and render on change
 
-- [ ] DOMEvents
-  - [ ] Create event listeners on Component
+- [X] DOMEvents
+  - [X] Create event listeners on Component
 
 - [ ] Storage
   - [ ] WebStorage
