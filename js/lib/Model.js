@@ -29,6 +29,10 @@
     return this.properties[property];
   };
 
+  Model.prototype.toJSON = function () {
+    return this.properties;
+  };
+
   // Extend Eventable
   _.extend(Model.prototype, Eventable);
 

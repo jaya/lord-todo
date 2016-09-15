@@ -44,6 +44,14 @@
     return this.models.indexOf(model);
   };
 
+  Collection.prototype.toJSON = function () {
+    var json = [];
+    this.models.forEach(function (model) {
+      json.push(model.toJSON());
+    });
+    return json;
+  };
+
   _.extend(Collection.prototype, Eventable);
 
   context.Collection = Collection;

@@ -13,6 +13,10 @@
   // Method inheritance
   Task.prototype = new Model();
 
+  Task.fromJSON = function (json) {
+    return new Task(json.title, json.completed);
+  };
+
   context.Task = Task;
 
 })(window, Model);

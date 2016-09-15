@@ -37,5 +37,6 @@ We'll be using some tools to help us along the way:
   - [X] Create event listeners on Component
 
 - [ ] Storage
+  - [X] Serialization
   - [ ] WebStorage
   - [ ] Sync'ing and throttling
