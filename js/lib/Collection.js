@@ -1,16 +1,23 @@
 (function (context) {
 
   var Collection = function (models) {
+    var collection = this;
+    this.models = [];
     if (models) {
-      this.models = models;
-    } else {
-      this.models = [];
+      models.forEach(function (model) {
+        collection.push(model);
+      });
     }
   };
 
   Collection.prototype.push = function (model) {
+    var collection = this;
     this.models.push(model);
     this.trigger('change');
+    model.on('change', function () {
+      collection.trigger('itemChanged');
+      // TODO: unbind event when item is removed
+    });
   };
 
   Collection.prototype.unshift = function (model) {
@@ -21,6 +28,7 @@
   Collection.prototype.remove = function (model) {
     this.models.splice(this.models.indexOf(model), 1);
     this.trigger('change');
+    // TODO: model.off('change')...
   };
 
   Collection.prototype.reset = function () {

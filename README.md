@@ -38,5 +38,5 @@ We'll be using some tools to help us along the way:
 
 - [ ] Storage
   - [X] Serialization
-  - [ ] WebStorage
+  - [X] WebStorage
   - [ ] Sync'ing and throttling
