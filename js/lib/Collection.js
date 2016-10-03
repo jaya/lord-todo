@@ -28,7 +28,7 @@
   Collection.prototype.remove = function (model) {
     this.models.splice(this.models.indexOf(model), 1);
     this.trigger('change');
-    // TODO: model.off('change')...
+    model.off('change');
   };
 
   Collection.prototype.reset = function () {

@@ -11,6 +11,12 @@
       this.eventHandlers[event].push(callback);
     },
 
+    off: function (event) {
+      if (this.eventHandlers) {
+        delete this.eventHandlers[event];
+      }
+    },
+
     trigger: function (event) {
       var target = this;
       if (this.eventHandlers && this.eventHandlers[event]) {
