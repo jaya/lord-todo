@@ -10,7 +10,8 @@
           'checked="checked"',
         '<% } %>',
       '/><%- model.get("title") %>',
-    '</div>'
+    '</div>',
+    '<button type="button" class="remove"><span>&times;</span></button>'
   ].join('\n');
 
   var TaskComponent = function (container, task) {
