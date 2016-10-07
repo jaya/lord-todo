@@ -28,9 +28,8 @@
       task.set('completed', ! task.get('completed'));
     });
 
-    $(this.container).find('[data-remove]').on('click', function (event) {
+    $(this.container).find('[data-remove]').on('click', function () {
       task.trigger('remove');
-      event.preventDefault();
     });
   };
 
