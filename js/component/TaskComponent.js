@@ -11,7 +11,7 @@
         '<% } %>',
       '/><%- model.get("title") %>',
     '</div>',
-    '<button type="button" class="remove"><span>&times;</span></button>'
+    '<button type="button" data-remove class="remove"><span>&times;</span></button>'
   ].join('\n');
 
   var TaskComponent = function (container, task) {
@@ -26,6 +26,11 @@
     var task = this.model;
     $(this.container).find('input').on('click', function () {
       task.set('completed', ! task.get('completed'));
+    });
+
+    $(this.container).find('[data-remove]').on('click', function (event) {
+      task.trigger('remove');
+      event.preventDefault();
     });
   };
 
