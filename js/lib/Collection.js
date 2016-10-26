@@ -10,18 +10,28 @@
     }
   };
 
-  Collection.prototype.push = function (model) {
+  Collection.prototype.bindEvents = function (model) {
     var collection = this;
-    this.models.push(model);
-    this.trigger('change');
+
     model.on('change', function () {
       collection.trigger('itemChanged');
-      // TODO: unbind event when item is removed
     });
+
+    model.on('remove', function() {
+      collection.remove(model);
+      collection.trigger('itemChanged');
+    });
+  };
+
+  Collection.prototype.push = function (model) {
+    this.models.push(model);
+    this.bindEvents(model);
+    this.trigger('change');
   };
 
   Collection.prototype.unshift = function (model) {
     this.models.unshift(model);
+    this.bindEvents(model);
     this.trigger('change');
   };
 
